@@ -1,13 +1,16 @@
 require.config({
 paths:{
-    'angular'    :'../components/angular/angular'
+    'angular'    :'../components/angular/angular',
+	'ngRoute' : '../components/angular/angular-route',
+    'angularAMD': '../components/requirejs/angularAMD',
 },
 shim:{
-    'angular': {
-        exports:'angular'
-    }
-}
+     'angular': {
+         exports:'angular'
+     },
+	'angularAMD': ['angular'],
+	'ngRoute' : ['angular']
+},
+ deps:[]
 });
-
-//Include all modules
-require(['controllers/MainCtrl'])
+require(['maincontroller'])
