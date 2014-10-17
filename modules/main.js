@@ -1,16 +1,24 @@
 require.config({
+packages: [
+    'modules/base',
+  ],
 paths:{
+	'angularAMD': '../components/requirejs/angularAMD',
     'angular'    :'../components/angular/angular',
-	'ngRoute' : '../components/angular/angular-route',
-    'angularAMD': '../components/requirejs/angularAMD',
+    'ui.router' : '../components/angularuirouter/angular-ui-router'
 },
 shim:{
      'angular': {
          exports:'angular'
      },
 	'angularAMD': ['angular'],
-	'ngRoute' : ['angular']
+	'ui.router' : ['angular']
 },
+waitSeconds: 15,
  deps:[]
 });
-require(['maincontroller'])
+require(['angular', 'maincontroller','base/main'], function(angular){
+	angular.element( document ).ready( function() {
+		angular.bootstrap( document, [ 'myApp' ] );
+	});
+})
