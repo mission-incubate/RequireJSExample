@@ -19,6 +19,6 @@ waitSeconds: 15,
 });
 require(['angular', 'maincontroller','base/main'], function(angular){
 	angular.element( document ).ready( function() {
-		angular.bootstrap( document, [ 'myApp' ] );
+		angular.bootstrap( document, [ 'myApp', 'base' ] );
 	});
 })

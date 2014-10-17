@@ -7,7 +7,7 @@ define([
   //'cs_common',
 
   // Controllers
-  './controllers/logincontroller',
+  './controllers/controller',
   
 ], function() {
 

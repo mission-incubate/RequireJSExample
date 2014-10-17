@@ -23,7 +23,7 @@ var BaseModule = angular.module('base', ['ui.router'])
 		$stateProvider
 		    .state("login", {
 			 url: "/login",
-			 templateUrl: 'modules/base/login/login.htm'
+			 templateUrl: 'modules/base/views/login/login.htm'
 			 // controller: 'LoginController'
 		 })
 		    .state("home", {
